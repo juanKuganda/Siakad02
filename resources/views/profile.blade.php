@@ -1,4 +1,4 @@
-<x-default-layout title="Dashboard" section_title="Dashboard">
+<x-default-layout title="Profile" section_title="Dashboard">
     <div class="flex flex-col md:w-1/2 lg:w-1/2 gap-4 px-6 py-4 bg-white border border-t-4 border-zinc-300 shadow col-span-3 md:col-span-2" >
         <div class="flex flex-col gap-2">
             <div class="font-semibold">Name</div>

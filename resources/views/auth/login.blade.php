@@ -28,7 +28,7 @@
         </div>
 
         <button type="submit"
-                class="bg-blue-500 border text-white px-3 py-2 text-center gap-2 cursor-pointer mt-4">
+                class="bg-red-500 border text-white px-3 py-2 text-center gap-2 cursor-pointer mt-4">
             <span>Login</span>
         </button>
 

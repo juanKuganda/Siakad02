@@ -16,7 +16,7 @@
             <table class="min-w-full bg-white shadow">
                 <thead>
                     <tr class="border-b border-zinc-200 text-sm leading-normal">
-                        <th class="py-3 px-6 text-left">#</th>
+                        <th class="py-3 px-6 text-left">Code</th>
                         <th class="py-3 px-6 text-left">Majors</th>
                         <th class="py-3 px-6 text-center">Total Students</th>
                     </tr>

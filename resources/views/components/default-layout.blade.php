@@ -12,14 +12,17 @@
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
-  <title>{{ $title }}</title>
+  <title>{{ $title }} - Siakad02</title>
 </head>
 
 <body class="bg-zinc-100">
   <main>
     <header x-data="{ open: false }"
             class="flex items-center justify-between sm:justify-start gap-8 bg-white border-b border-zinc-300 sticky top-0 px-3 sm:px-8 py-4">
-      <h2 class="text-lg sm:text-xl font-bold">Student Management</h2>
+            <div class="flex items-center gap-2">
+              <img src="/assets/img/logoUntad.png" alt="" class="size-8">
+              <p class="text-xl uppercase font-bold">Siakad02</p>
+          </div>
       {{-- Desktop navigation --}}
       <nav>
         <ul class="hidden sm:flex">

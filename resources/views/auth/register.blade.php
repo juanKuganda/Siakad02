@@ -39,7 +39,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="bg-blue-500 border text-white px-3 py-2 text-center gap-2 cursor-pointer mt-4">
+        <button type="submit" class="bg-red-500 border text-white px-3 py-2 text-center gap-2 cursor-pointer mt-4">
             <span>Register</span>
         </button>
 

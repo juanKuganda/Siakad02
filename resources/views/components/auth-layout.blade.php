@@ -11,23 +11,23 @@
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
-    <title>{{ $title }}</title>
+    <title>{{ $title }} - Siakad02</title>
 </head>
 <body class="bg-zinc-100">
-    <main class="flex items-center justify-center min-h-svh">
-        <div class="space-y-6 p-6 max-w-[30rem] w-full">
-            <div class="flex items-center justify-center gap-2">
-                <i class="ph ph-student inline-block text-xl bg-zinc-900 text-white p-1 rounded-b-md"></i>
-                <p class="font-semibold text-sm">Student Management</p>
+    <main class="flex items-center w-full h-full">
+        <div class="space-y-6 p-6 w-full h-full">
+            <div class="flex items-center gap-2">
+                <img src="/assets/img/logoUntad.png" alt="" class="size-8">
+                <p class="text-xl uppercase font-bold">Siakad02</p>
             </div>
             <div
-                class="flex flex-col items-center justify-center gap-4 w-full border border-zinc-300 rounded-md shadow-md bg-white p-4">
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <h2 class="text-lg font-bold text-center">{{ $title }}</h2>
-                    <p class="text-sm text-center text-zinc-500">{{ $section_description }}</p>
+                class="flex justify-center gap-4 w-full border border-zinc-300 rounded-md shadow-md bg-white h-fit">
+                <div class="w-[50%] p-6">
+                    {{ $slot }}
                 </div>
-                <div class="h-[1px] bg-zinc-300 w-full"></div>
-                {{ $slot }}
+                <div class="rounded-lg">
+                   <img src="/assets/img/untad.png" alt="" class="size-96 object-cover w-full h-full rounded-md">
+                </div>
             </div>
         </div>
         </div>
