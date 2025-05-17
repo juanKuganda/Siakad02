@@ -7,7 +7,7 @@
 
     @can('store-student')
         <div class="flex">
-            <a href="{{ route('students.store') }}"
+            <a href="{{ route('students.add') }}"
                class="bg-green-50 text-green-500 border border-green-500 px-3 py-2 flex items-center gap-2">
                 <i class="ph ph-plus block text-green-500"></i>
                 <div>Add Student</div>
