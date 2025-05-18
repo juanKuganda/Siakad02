@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MajorController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Studentcontroller;
+use App\Http\Controllers\SubjectController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -35,6 +36,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/majors/{id}', [MajorController::class, 'show'])->name('majors.show');
     Route::get('/majors/{id}/edit', [MajorController::class, 'edit'])->name('majors.edit');
     Route::delete('/major/{id}', [Majorcontroller::class, 'destroy'])->name('major.destroy');
+
+    
+    Route::post('/subject', [SubjectController::class, 'store'])->name('subject.store');
+    Route::get('/subjects', [SubjectController::class, 'index'])->name('subject.index');
+    Route::get('/subject/create', [SubjectController::class, 'create'])->name('subject.create');
+    Route::put('/subject/{id}', [SubjectController::class, 'update'])->name('subject.update');
+    Route::get('/subject/{id}', [SubjectController::class, 'show'])->name('subject.show');
+    Route::get('/subject/{id}/edit', [SubjectController::class, 'edit'])->name('subject.edit');
+    Route::delete('/subject/{id}', [SubjectController::class, 'destroy'])->name('subject.destroy');
 });
 
 require __DIR__.'/settings.php';

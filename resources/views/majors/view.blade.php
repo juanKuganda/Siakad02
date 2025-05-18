@@ -1,4 +1,4 @@
-<x-default-layout title="Student" section_title="Student detail">
+<x-default-layout title="Major" section_title="Major detail">
   <div class="grid grid-cols-3">
     <div class="flex flex-col gap-4 px-6 py-4 bg-white border border-t-4 border-zinc-300 shadow col-span-3 md:col-span-2">
       <div class="grid sm:grid-cols-2 gap-4">
@@ -9,7 +9,7 @@
           </div>
         </div>
         <div class="flex flex-col gap-2">
-          <div>Major Code Numberr</div>
+          <div>Major Code</div>
           <div class="px-3 py-2 border border-zinc-300">
             {{ $major->code }}
           </div>

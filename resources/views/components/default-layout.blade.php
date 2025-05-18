@@ -57,6 +57,14 @@
               Majors
             </a>
           </li>
+          <li>
+            <a href="{{ route('subject.index') }}"
+               class="{{ request()->is('subject') ? 'text-black' : 'text-zinc-500' }}
+               flex items-center gap-2 px-2 py-1 rounded font-semibold hover:text-black text-sm">
+          <i class="ph ph-exam block text-black text-2xl"></i>
+              Subject
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
