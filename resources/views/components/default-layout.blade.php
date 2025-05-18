@@ -16,7 +16,7 @@
 </head>
 
 <body class="bg-zinc-100">
-  <main x-data="{ sidebarOpen: true }" class="flex w-screen h-screen">
+  <main x-data="{ sidebarOpen: true }" class="flex w-screen h-screen overflow-x-hidden">
     <div x-show="sidebarOpen" 
          x-transition:enter="transition ease-out duration-300"
          x-transition:enter-start="opacity-0 transform -translate-x-full"
@@ -24,7 +24,7 @@
          x-transition:leave="transition ease-in duration-300"
          x-transition:leave-start="opacity-100 transform translate-x-0"
          x-transition:leave-end="opacity-0 transform -translate-x-full"
-         class="bg-white p-5 w-[20%] hidden md:block">
+         class="bg-white p-5 w-[20%] hidden md:block h-[100%]">
       <nav>
         <ul class="flex flex-col gap-5">
           <li>
@@ -65,12 +65,20 @@
               Subject
             </a>
           </li>
+          <li>
+            <a href="{{ route('krs.index') }}"
+               class="{{ request()->is('krs') ? 'text-black' : 'text-zinc-500' }}
+               flex items-center gap-2 px-2 py-1 rounded font-semibold hover:text-black text-sm">
+          <i class="ph ph-chalkboard-teacher block text-black text-2xl"></i>
+              KRS
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
     <div class="w-full">
       <header x-data="{ open: false }"
-              class="flex items-center justify-between sm:justify-start gap-8 bg-white border-b border-zinc-300 sticky top-0 px-3 sm:px-8 py-4">
+              class="flex items-center justify-between sm:justify-start gap-8 bg-white border-b border-zinc-300 sticky top-0 px-3  py-4">
 
         <button @click="sidebarOpen = !sidebarOpen" 
                 class="p-2 border rounded-lg cursor-pointer hover:bg-gray-100 hidden md:block">
@@ -131,7 +139,7 @@
         </div>
       </header>
       
-      <section class="px-3 sm:px-8 py-4 flex flex-col gap-6">
+      <section class="px-3 py-4 flex flex-col gap-6 w-[80%]">
         <h1 class="text-3xl font-bold">{{ $section_title }}</h1>
         {{ $slot }}
       </section>

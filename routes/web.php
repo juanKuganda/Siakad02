@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KrsController;
 use App\Http\Controllers\MajorController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Studentcontroller;
@@ -28,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/student/{id}/edit', [Studentcontroller::class, 'edit'])->name('students.edit');
     Route::put('/student/{id}', [Studentcontroller::class, 'update'])->name('students.update');
     Route::delete('/students/{id}', [Studentcontroller::class, 'destroy'])->name('students.destroy');
-    
+
     Route::post('/majors', [MajorController::class, 'store'])->name('majors.store');
     Route::get('/majors', [MajorController::class, 'index'])->name('majors.index');
     Route::get('/majors/create', [MajorController::class, 'create'])->name('majors.create');
@@ -37,7 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/majors/{id}/edit', [MajorController::class, 'edit'])->name('majors.edit');
     Route::delete('/major/{id}', [Majorcontroller::class, 'destroy'])->name('major.destroy');
 
-    
+
     Route::post('/subject', [SubjectController::class, 'store'])->name('subject.store');
     Route::get('/subjects', [SubjectController::class, 'index'])->name('subject.index');
     Route::get('/subject/create', [SubjectController::class, 'create'])->name('subject.create');
@@ -45,7 +46,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/subject/{id}', [SubjectController::class, 'show'])->name('subject.show');
     Route::get('/subject/{id}/edit', [SubjectController::class, 'edit'])->name('subject.edit');
     Route::delete('/subject/{id}', [SubjectController::class, 'destroy'])->name('subject.destroy');
+    
+    
+    Route::get('/krs', [KrsController::class, 'index'])->name('krs.index');
+    Route::get('/krs/create', [KrsController::class, 'create'])->name('krs.create');
+    Route::post('/krs', [KrsController::class, 'store'])->name('krs.store');
 });
 
-require __DIR__.'/settings.php';
-require __DIR__.'/auth.php';
+require __DIR__ . '/settings.php';
+require __DIR__ . '/auth.php';
