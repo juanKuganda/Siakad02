@@ -15,8 +15,8 @@
   <title>{{ $title }} - Siakad02</title>
 </head>
 
-<body class="bg-zinc-100">
-  <main x-data="{ sidebarOpen: true }" class="flex w-screen h-screen overflow-x-hidden">
+<body class="bg-zinc-100 h-full">
+  <main x-data="{ sidebarOpen: true }" class="flex h-screen">
     <div x-show="sidebarOpen" 
          x-transition:enter="transition ease-out duration-300"
          x-transition:enter-start="opacity-0 transform -translate-x-full"
@@ -24,7 +24,7 @@
          x-transition:leave="transition ease-in duration-300"
          x-transition:leave-start="opacity-100 transform translate-x-0"
          x-transition:leave-end="opacity-0 transform -translate-x-full"
-         class="bg-white p-5 w-[20%] hidden md:block h-[100%]">
+         class="bg-white p-5 w-[20%]">
       <nav>
         <ul class="flex flex-col gap-5">
           <li>
@@ -76,7 +76,7 @@
         </ul>
       </nav>
     </div>
-    <div class="w-full">
+    <div class="w-full h-fit">
       <header x-data="{ open: false }"
               class="flex items-center justify-between sm:justify-start gap-8 bg-white border-b border-zinc-300 sticky top-0 px-3  py-4">
 
@@ -116,7 +116,7 @@
         <i class="ph ph-list block text-slate-400"></i>
       </button>
 
-        {{-- mobile navigation --}}
+        {{-- mobile navigation --}} 
         <div x-show="open" class="bg-white border border-zinc-300 shadow-lg sm:hidden absolute top-12 right-3">
           <ul class="flex flex-col gap-2">
             <li x-on:click="open = !open">
@@ -139,7 +139,7 @@
         </div>
       </header>
       
-      <section class="px-3 py-4 flex flex-col gap-6 w-[80%]">
+      <section class="px-3 py-4 flex flex-col gap-6 w-[80%] overflow-y-auto h-full">
         <h1 class="text-3xl font-bold">{{ $section_title }}</h1>
         {{ $slot }}
       </section>
