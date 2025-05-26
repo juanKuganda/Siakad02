@@ -38,13 +38,13 @@
                         <td class="py-3 px-6 text-center">{{ $student->majors->name }}</td>
                         <td class="py-3 px-6 text-center">{{ $student->status }}</td>
                         <td class="py-3 px-6 flex justify-center gap-1">
-                            <a href="{{ route('students.show', $student->id) }}"
+                            <a href="{{ route('students.show', $student->id_student) }}"
                                class="bg-blue-50 border border-blue-500 p-2 inline-block">
                                 <i class="ph ph-eye block text-blue-500"></i>
                             </a>
 
                             @can('edit-student')
-                                <a href="{{ route('students.edit', $student->id) }}"
+                                <a href="{{ route('students.edit', $student->id_student) }}"
                                    class="bg-yellow-50 border border-yellow-500 p-2 inline-block">
                                     <i class="ph ph-note-pencil block text-yellow-500"></i>
                                 </a>
@@ -52,7 +52,7 @@
 
                             @can('destroy-student')
                                 <form onsubmit="return confirm('Are you sure?')" method="POST"
-                                      action="{{ route('students.destroy', $student->id) }}">
+                                      action="{{ route('students.destroy', $student->id_student) }}">
                                     @method('DELETE')
                                     @csrf
                                     <button type="submit" class="bg-red-50 border border-red-500 p-2">

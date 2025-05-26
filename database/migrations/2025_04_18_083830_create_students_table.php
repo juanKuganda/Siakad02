@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('students', function (Blueprint $table) {
-            $table->id();
+            $table->id("id_student");
             $table->string('name');
             $table->string('student_id_number');
             $table->string('email');
@@ -20,9 +20,9 @@ return new class extends Migration
             $table->date('birth_date');
             $table->enum('gender', ['Male', 'Female']);
             $table->enum('status', ['Active', 'Inactive', 'Graduated' , 'Dropped Out']);
-            $table->foreignId('major_id')->constrained(
+            $table->foreignId('majors_id')->constrained(
                 'majors',
-                'id',
+                'id_major',
                 'majors_student_id'
                 )->onDelete('restrict')->onUpdate('cascade');
             $table->timestamps();

@@ -11,8 +11,8 @@
                         {{ $selectedStudent ? 'disabled' : '' }}>
                     <option value="" disabled {{ !$selectedStudent ? 'selected' : '' }}>Select Student</option>
                     @foreach ($students as $student)
-                        <option value="{{ $student->id }}" 
-                                {{ $selectedStudent && $selectedStudent->id == $student->id ? 'selected' : '' }}>
+                        <option value="{{ $student->id_student }}" 
+                                {{ $selectedStudent && $selectedStudent->id_student == $student->id_student ? 'selected' : '' }}>
                             {{ $student->name }} ({{ $student->student_id_number }})
                         </option>
                     @endforeach
@@ -31,7 +31,7 @@
                         class="px-3 py-2 border border-zinc-300 appearance-none bg-slate-50">
                     <option value="" disabled selected>Select Subject</option>
                     @foreach ($subjects as $subject)
-                        <option value="{{ $subject->id }}">
+                        <option value="{{ $subject->id_subject }}">
                             {{ $subject->name }} ({{ $subject->subject_code }})
                         </option>
                     @endforeach

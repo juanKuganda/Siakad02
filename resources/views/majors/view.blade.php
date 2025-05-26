@@ -28,7 +28,7 @@
            class="bg-slate-50 border border-slate-500 text-slate-500 px-3 py-2 cursor-pointer">
           <span>Back</span>
         </a>
-        <a href="{{ route('majors.edit', $major->id) }}"
+        <a href="{{ route('majors.edit', $major->id_major) }}"
            class="bg-yellow-50 border border-yellow-500 text-yellow-500 px-3 py-2 flex items-center gap-2 cursor-pointer">
           <i class="ph ph-note-pencil block text-yellow-500"></i>
           <span>Edit</span>

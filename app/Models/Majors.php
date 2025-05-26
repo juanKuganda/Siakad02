@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Majors extends Model
 {
+    protected $primaryKey = 'id_major';
     public function students():HasMany{
         return $this->hasMany(Student::class);
     }

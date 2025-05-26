@@ -13,8 +13,8 @@ class DashboardController extends Controller
             'students' => Student::with('majors')->get(),
             'totalMajors' => Majors::count(),
             'activeStudents' => Student::where('status', 'active')->count(),
-            'studentsByMajor' => Student::groupBy('major_id')
-                ->selectRaw('major_id, count(*) as total')
+            'studentsByMajor' => Student::groupBy('majors_id')
+                ->selectRaw('majors_id, count(*) as total')
                 ->with('majors')
                 ->get()
         ];

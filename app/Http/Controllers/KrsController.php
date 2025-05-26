@@ -21,7 +21,7 @@ class KrsController extends Controller
         $krs = [];
         if ($student) {
             $krs = Krs::with(['student', 'subject'])
-                     ->where('student_id', $student->id)
+                     ->where('student_id', $student->id_student)
                      ->get();
         }
 
@@ -44,8 +44,8 @@ class KrsController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'student_id' => 'required|exists:students,id',
-            'subject_id' => 'required|exists:subjects,id',
+            'student_id' => 'required|exists:students,id_student',
+            'subject_id' => 'required|exists:subjects,id_subject',
             'semester' => 'required|in:1,2,3,4,5,6,7,8',
             'academic_year' => 'required',
         ]);

@@ -45,8 +45,8 @@ class MajorController extends Controller
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([
-            'name' => "required|unique:majors,name,$id",
-            'code' => "required|unique:majors,code,$id",
+            'name' => "required|unique:majors,name,$id,id_major",
+            'code' => "required|unique:majors,code,$id,id_major",
             'description' => 'required',
         ]);
 

@@ -77,7 +77,7 @@
                             class="px-3 py-2 border border-zinc-300 appearance-none bg-slate-50">
                         <option value="" disabled selected>Select Majors</option>
                         @foreach ($majors as $major)
-                            <option value="{{ $major->id }}" {{ old('majors') == $major->id ? 'selected' : '' }}>
+                            <option value="{{ $major->id_major }}" {{ old('majors') == $major->id_major ? 'selected' : '' }}>
                                 {{ $major->name }}
                             </option>
                         @endforeach

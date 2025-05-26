@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Student extends Model
 {
+    protected $primaryKey = 'id_student';
     public function majors(): BelongsTo
     {
-        return $this->belongsTo(Majors::class, 'major_id');
+        return $this->belongsTo(Majors::class, 'majors_id', 'id_major');
     }
     protected $fillable = [
             'name',
@@ -20,7 +21,7 @@ class Student extends Model
             'birth_date',
             'gender',
             'status',
-            'major_id'
+            'majors_id'
     ];
 
 }

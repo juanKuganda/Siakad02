@@ -22,7 +22,7 @@ class StudentSeeder extends Seeder
                 'birth_date' => '2000-01-01',
                 'gender' => 'Male',
                 'status' => 'Active',
-                'major_id' => 1,
+                'majors_id' => 1,
             ],
             [
                 'name' => 'juan',
@@ -32,7 +32,7 @@ class StudentSeeder extends Seeder
                 'birth_date' => '2004-06-01',
                 'gender' => 'Male',
                 'status' => 'Active',
-                'major_id' => 2,
+                'majors_id' => 2,
             ],
         ]);
     }

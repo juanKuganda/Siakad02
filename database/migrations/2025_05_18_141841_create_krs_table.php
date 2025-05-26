@@ -11,15 +11,13 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('krs', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('student_id')->constrained('students')->onDelete('cascade');
-            $table->foreignId('subject_id')->constrained('subjects')->onDelete('cascade');
+            $table->id("id_krs");
+            $table->foreignId('student_id')->references('id_student')->on('students')->onDelete('cascade');
+            $table->foreignId('subject_id')->references('id_subject')->on('subjects')->onDelete('cascade'); // Fixed this line
             $table->string('semester');
             $table->string('academic_year');
             $table->timestamps();
 
-            // Prevent duplicate entries
-            $table->unique(['student_id', 'subject_id', 'semester', 'academic_year']);
         });
     }
 

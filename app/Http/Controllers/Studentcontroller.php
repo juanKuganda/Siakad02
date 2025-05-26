@@ -60,7 +60,7 @@ class StudentController extends Controller
             'birth_date' => $validated['birth_date'],
             'gender' => $validated['gender'],
             'status' => $validated['status'],
-            'major_id' => $validated['majors'],
+            'majors_id' => $validated['majors'],
         ]);
 
         return redirect()->route('students.index')->with('success', 'Student created successfully');
@@ -83,8 +83,8 @@ class StudentController extends Controller
         }
         $validated = $request->validate([
             'name' => 'required',
-            'student_id_number' => "required|unique:students,student_id_number,$id|max:9",
-            'email' => "required|email|unique:students,email,$id",
+            'student_id_number' => "required|unique:students,student_id_number,{$id},id_student|max:9",
+            'email' => "required|email|unique:students,email,{$id},id_student",
             'phone_number' => 'required',
             'birth_date' => 'required|date',
             'gender' => 'required|in:Female,Male',
@@ -102,7 +102,7 @@ class StudentController extends Controller
             'birth_date' => $validated['birth_date'],
             'gender' => $validated['gender'],
             'status' => $validated['status'],
-            'major_id' => $validated['majors'],
+            'majors_id' => $validated['majors'],
         ]);
 
         return redirect()->route('students.index')->with('success', 'Student updated successfully');

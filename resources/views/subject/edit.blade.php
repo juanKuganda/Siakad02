@@ -1,6 +1,6 @@
 <x-default-layout title="Subject" section_title="Edit subject data">
     <div class="grid grid-cols-3">
-        <form action="{{ route('subject.update', $subject->id) }}" method="POST"
+        <form action="{{ route('subject.update', $subject->id_subject) }}" method="POST"
               class="flex flex-col gap-4 px-6 py-4 bg-white border border-zinc-300 shadow col-span-3 md:col-span-2">
             @csrf
             @method("PUT")

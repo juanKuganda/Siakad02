@@ -44,7 +44,7 @@
                             <i class="ph ph-note-pencil block text-yellow-500"></i>
                         </a>
                        <form onsubmit="return confirm('Are you sure you want to delete this subject?')"
-                        action="{{ route('subject.destroy', $item->id) }}" method="POST">
+                        action="{{ route('subject.destroy', $item->id_subject) }}" method="POST">
                         @csrf
                         @method('DELETE')
                             <button type="submit" class="bg-red-50 border cursor-pointer border-red-500 p-2">

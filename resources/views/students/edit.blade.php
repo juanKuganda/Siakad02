@@ -1,6 +1,6 @@
 <x-default-layout title="Student" section_title="edit student data">
     <div class="grid grid-cols-3">
-        <form action="{{ route('students.update', $student->id) }}" method="POST"
+        <form action="{{ route('students.update', $student->id_student) }}" method="POST"
             class="flex flex-col gap-4 px-6 py-4 bg-white border border-zinc-300 shadow col-span-3 md:col-span-2">
             @csrf
             @method("PUT")
@@ -89,8 +89,8 @@
                     class="px-3 py-2 border border-zinc-300 appearance-none bg-slate-50">
                     <option value="" disabled>Select Majors</option>
                     @foreach ($majors as $major)
-                        <option value="{{ $major->id }}"
-                            {{ old('majors', $student->majors_id) == $major->id ? 'selected' : '' }}>
+                        <option value="{{ $major->id_major }}"
+                            {{ old('majors', $student->majors_id) == $major->id_major ? 'selected' : '' }}>
                             {{ $major->name }}
                         </option>
                     @endforeach

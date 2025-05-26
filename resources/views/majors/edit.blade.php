@@ -1,6 +1,6 @@
 <x-default-layout title="Major" section_title="Edit major data">
     <div class="grid grid-cols-3">
-        <form action="{{ route('major.update', $major->id) }}" method="POST"
+        <form action="{{ route('major.update', $major->id_major) }}" method="POST"
               class="flex flex-col gap-4 px-6 py-4 bg-white border border-zinc-300 shadow col-span-3 md:col-span-2">
             @csrf
             @method("PUT")

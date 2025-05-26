@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="p-4 border-t border-zinc-200">
-            <a href="{{ route('krs.create', ['student_id' => $student->id]) }}"
+            <a href="{{ route('krs.create', ['student_id' => $student->id_krs]) }}"
                class="bg-green-50 text-green-500 border border-green-500 px-3 py-2 inline-flex items-center gap-2">
                 <i class="ph ph-plus block text-green-500"></i>
                 <span>Add Subject</span>
